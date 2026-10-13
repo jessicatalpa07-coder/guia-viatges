@@ -1,45 +1,30 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import Footerweb from './components/Footerweb.vue'
 </script>
 
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/">Inici</RouterLink>
-      <RouterLink to="/destinacions">Destinacions</RouterLink>
-      <RouterLink to="/sobre-nosaltres">Sobre nosaltres</RouterLink>
-    </nav>
-  </header>
-
-  <main>
-    <RouterView />
-  </main>
+  <div class="app">
+    <NavBar />
+    <main>
+      <RouterView />
+    </main>
+    <Footerweb />
+  </div>
 </template>
 
 <style scoped>
-nav {
+.app {
+  min-height: 100vh;
   display: flex;
-  gap: 1.5rem;
-  padding: 1rem 2rem;
-  background: #4a2c6d;
-}
-nav a {
-  color: #e6dcf2;
-  font-weight: 500;
-  padding-bottom: 2px;
-}
-nav a:hover {
-  color: #ffffff;
-}
-nav a.router-link-exact-active {
-  color:#ffffff;
-  border-bottom: 2px solid #c9a7eb;
+  flex-direction: column;
 }
 main {
+  flex: 1;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  min-height: 60vh;
 }
-
 </style>
