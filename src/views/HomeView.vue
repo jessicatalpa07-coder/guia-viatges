@@ -5,9 +5,11 @@ import { RouterLink } from 'vue-router'
 <template>
   <div class="inici">
     <section class="hero">
-      <h1>Guia de viatges</h1>
-      <p>Troba la teva propera aventura: ciutats, cultura, gastronomia i racons per descobrir arreu del món.</p>
-      <RouterLink to="/destinacions" class="boto">Veure destinacions</RouterLink>
+      <div class="quadre">
+        <h1>Guia de viatges</h1>
+        <p>Troba la teva propera aventura: ciutats, cultura, gastronomia i racons per descobrir arreu del món.</p>
+        <RouterLink to="/destinacions" class="boto">Veure destinacions</RouterLink>
+      </div>
     </section>
 
     <section>
@@ -42,31 +44,51 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, #4a2c6d, #8a5fbf);
-  color: #ffffff;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -2rem;
+  margin-bottom: 0;
+  padding: 5rem 1.5rem 7rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f2fa;
+  background-image:
+    linear-gradient(to bottom, rgba(246, 242, 250, 0) 45%, #f6f2fa 95%),
+    url('/img/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 0 0 #f6f2fa;
+}
+.quadre {
+  max-width: 640px;
   text-align: center;
-  padding: 3rem 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
 }
-.hero h1 {
-  color: #ffffff;
-  font-size: 2.4rem;
+.quadre h1 {
+  color: #4a2c6d;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
-.hero p {
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
+.quadre p {
+  color: #4a2c6d;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
 }
 .boto {
   display: inline-block;
-  background: #ffffff;
-  color: #4a2c6d;
+  background: #4a2c6d;
+  color: #ffffff;
   font-weight: 600;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.8rem;
   border-radius: 999px;
+  transition: background 0.2s ease;
 }
 .boto:hover {
-  background: #e6dcf2;
+  background: #6a3f96;
 }
 h2 {
   color: #4a2c6d;
@@ -88,9 +110,33 @@ h2 {
   margin-bottom: 0.5rem;
 }
 .passos {
-  padding-left: 1.25rem;
+  list-style: none;
+  counter-reset: pas;
+  padding: 0;
 }
 .passos li {
+  counter-increment: pas;
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.9rem 1rem 0.9rem 3.5rem;
   margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(74, 44, 109, 0.12);
+}
+.passos li::before {
+  content: counter(pas);
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: #4a2c6d;
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

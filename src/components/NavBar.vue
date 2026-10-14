@@ -7,6 +7,7 @@ import { RouterLink } from 'vue-router'
     <nav>
       <RouterLink to="/">Inici</RouterLink>
       <RouterLink to="/destinacions">Destinacions</RouterLink>
+      <RouterLink to="/registre">Registra't</RouterLink>
       <RouterLink to="/sobre-nosaltres">Sobre nosaltres</RouterLink>
     </nav>
   </header>
@@ -15,6 +16,7 @@ import { RouterLink } from 'vue-router'
 <style scoped>
 nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   padding: 1rem 2rem;
   background: #4a2c6d;
