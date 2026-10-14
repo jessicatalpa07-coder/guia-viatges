@@ -9,9 +9,16 @@ defineProps({
 
 <template>
   <article class="targeta">
-    <h2>{{ destinacio.nom }}</h2>
-    <p class="pais">{{ destinacio.pais }}</p>
-    <p>{{ destinacio.descripcio }}</p>
+    <img
+      v-if="destinacio.imatge"
+      :src="destinacio.imatge"
+      :alt="'Imatge de ' + destinacio.nom"
+    />
+    <div class="contingut">
+      <h2>{{ destinacio.nom }}</h2>
+      <p class="pais">{{ destinacio.pais }}</p>
+      <p>{{ destinacio.descripcio }}</p>
+    </div>
   </article>
 </template>
 
@@ -19,8 +26,17 @@ defineProps({
 .targeta {
   background: #ffffff;
   border-radius: 8px;
-  padding: 1rem 1.25rem;
+  overflow: hidden;
   box-shadow: 0 2px 6px rgba(74, 44, 109, 0.15);
+}
+.targeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.contingut {
+  padding: 1rem 1.25rem;
 }
 .targeta h2 {
   color: #4a2c6d;

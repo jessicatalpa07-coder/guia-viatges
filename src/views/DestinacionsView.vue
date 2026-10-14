@@ -55,6 +55,7 @@ onMounted(async () => {
 <style scoped>
 .llista {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 </style>
