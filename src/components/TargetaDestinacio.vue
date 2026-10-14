@@ -28,6 +28,13 @@ defineProps({
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(74, 44, 109, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.targeta:hover,
+.targeta:active {
+  transform: scale(1.04);
+  box-shadow: 0 8px 18px rgba(74, 44, 109, 0.3);
 }
 .targeta img {
   width: 100%;
