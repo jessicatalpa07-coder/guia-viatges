@@ -58,7 +58,7 @@ import { RouterLink } from 'vue-router'
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 2px 0 0 #f6f2fa;
+  box-shadow: 0 8px 0 0 #f6f2fa;
 }
 .quadre {
   max-width: 640px;
