@@ -23,8 +23,8 @@ import Footerweb from './components/Footerweb.vue'
 main {
   flex: 1;
   width: 100%;
-  max-width: 900px;
+  max-width: 1450px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 1.5rem 2rem 2rem;
 }
 </style>
