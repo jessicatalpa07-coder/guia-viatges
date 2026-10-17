@@ -74,13 +74,13 @@ Perquè les rutes funcionin també quan es recarrega la pàgina o s'hi entra dir
 
 Aquestes són les captures de com tinc les dades a Firestore:
 
-![Estructura de Firestore](docs/captura-firestore-estructura.png)
+![Estructura de Firestore](docs/captura-firestore-estructura.jpg)
 
-![Un altre document de Firestore](docs/captura-firestore-2.png)
+![Un altre document de Firestore](docs/captura-firestore-2.jpg)
 
 I aquestes són les regles publicades:
 
-![Regles de Firestore](docs/captura-regles.png)
+![Regles de Firestore](docs/firebase-regles.jpg)
 
 ### Buscador
 A la pàgina de destinacions hi ha un quadre de cerca. Quan escrius el nom d'una ciutat, només es queden les targetes que coincideixen. El filtre es fa a la mateixa pàgina, sense tornar a demanar res a Firestore.
