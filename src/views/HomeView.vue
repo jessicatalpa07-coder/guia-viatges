@@ -44,21 +44,22 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 .hero {
+  position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-top: -2rem;
+  margin-top: -1.5rem;
   margin-bottom: 0;
   padding: 5rem 1.5rem 7rem;
   display: flex;
   justify-content: center;
-  background-color: #f6f2fa;
-  background-image:
-    linear-gradient(to bottom, rgba(246, 242, 250, 0) 45%, #f6f2fa 95%),
-    url('/img/portada.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 8px 0 0 #f6f2fa;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/img/portada.jpg') center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
 }
 .quadre {
   max-width: 640px;
@@ -67,6 +68,8 @@ import { RouterLink } from 'vue-router'
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 1;
 }
 .quadre h1 {
   color: #4a2c6d;
